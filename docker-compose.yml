@@ -60,5 +60,11 @@ services:
     depends_on:
       - database
 
+  csfixer:
+    image: cytopia/php-cs-fixer:latest
+    working_dir: /workdir
+    volumes:
+      - ./:/workdir
+
 volumes:
   database_data:

@@ -54,7 +54,20 @@ docker compose build api
 docker compose build frontend
 ```
 
+## Makefile Shortcuts
+```bash
+make up
+make down
+make build
+make csfix
+```
+
+## Code Style (PHP CS Fixer via Docker)
+Uses a public Docker Hub image.
+```bash
+docker compose run --rm csfixer fix api
+```
+
 ## Notes
 - Database volume is persisted in `database_data`.
 - Symfony reads DB settings from `DATABASE_URL` in `docker-compose.yml`.
-
